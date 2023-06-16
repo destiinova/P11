@@ -1,8 +1,6 @@
 /*
 Theme Name: motaphoto
-Theme URI: https://www.monsite.com/monsite
 Author: Destinova
-Author URI: https://www.monsite.com/monsite
 Description: site pour un photographe
 Version: 2023
 */
@@ -23,14 +21,53 @@ Version: 2023
     /* Styles spécifiques pour les grands écrans */
   }
   
-
-/*HEADER*/
-.headerlogo{
-    width: 216px;
+html{
+    font-family: 'space mono';
+    background-color: #FFFFFF;
 }
+.headerlogo{
+    width: 216px; 
+}
+
+body {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+/*MENU PRINCIPAL*/
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #000;
+}
+
+.menu li a:hover {
+    background-color: #f0f0f0;
+}
+
+
+/*#menu{
+    display: flex;
+    flex-direction: row;
+}
+#container {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
 header{
-    justify-content:space-between; 
-    align-items: center;
+    display: block;
 }
 .nav{
     display: flex;
@@ -38,6 +75,15 @@ header{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    text-align: center;
+    justify-content: end;
+    align-items: center;
+    margin: 0px;
 }
 
 a {
@@ -49,13 +95,65 @@ a {
 	text-decoration: none;
 }
 
-/*.menu-menu-principal-container{
+.menu-menu-principal-container{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-}/*
+}
+@media screen and (max-width: 840px) {
+    .nav{
+        justify-content: center;
+    }
+    nav ul{
+        justify-content: center;
+        
+    }
+    #menu-menu-principal{
+        flex-wrap: wrap;
+    }
+    .headerlogo{
+        width: 200px;
+        height: auto;
+        text-align: center;
+        margin: 15px 0;
+    }
+}
+nav li{
+    float: right;
+    padding: 30px 61px;
+} 
+*/
+
+/*MENU FOOTER*/
+.footer-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.footer-menu li {
+    display: inline-block;
+}
+
+.footer-menu li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-menu li a:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+
+
+
+
 
 
 /* MENU BURGUER */
@@ -122,18 +220,7 @@ ul li {
 }/*
 
 
-/*FOOTER*/
-footer{
-    background: #ffffff;
-    width: 1440px;
-    height: 40px;
-    display: flex;
-    justify-content: space-evenly;
-}
 
-.my-footer-menu{
-    margin-top: 10px;
-   }
 
 /* MODALE FORMS */
 .modal {
@@ -173,7 +260,16 @@ footer{
   
 
 
-
+/*HEADER*/
+  span{
+    float: right;
+    padding: 30px 61px;
+    font-family: 'space mono';
+    color: #000000;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+} 
 
 
 
@@ -191,7 +287,7 @@ body {
     justify-content: center;
 }
 
-/*HEADER planty*/
+
 .container {
     flex-direction: column;
     flex-wrap: wrap;
@@ -227,19 +323,6 @@ nav ul{
         text-align: center;
         margin: 15px 0;
     }
-}
-nav li{
-    float: right;
-    padding: 30px 61px;
-} 
-
-
-nav li:last-child{
-    background: #DC9F96;
-}
-
-nav li:last-child a {
-    color: #FFFFFF !important;
 }
 
 

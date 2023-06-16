@@ -1,21 +1,19 @@
-<?php get_header();?> 
+<?php get_header(); ?>
 
+<main>
+    <div class="container">
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <article <?php post_class(); ?>>
+                <h2><?php the_title(); ?></h2>
+                <div class="entry-content">
+                    <?php the_content(); ?>
+                </div>
+            </article>
+        <?php endwhile; endif; ?>
+    </div>
+</main>
 
-
-
-<!--if ( have_posts() ) : while ( have_posts() ) : the_post();
-get_template_part( 'entry' );
-comments_template();
-endwhile; endif;
-get_template_part( 'nav', 'below' );-->
-
-
-<?php get_footer(); ?> 
-</body>
-</html>
-
-
-
+<?php get_footer(); ?>
 
 
 <!-- 
