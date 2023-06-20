@@ -3,16 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="<?php bloginfo( 'charset' ); ?>" />
+    <meta name="viewport" content="width=device-width">
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Space+Mono&display=swap" rel="stylesheet">
     <?php wp_head() ?>
 </head>
-
+<body>
 <header>
-        <nav class="main-menu">
+<nav class="main-menu">
             <!--APPARITION LOGO HEADER-->
             <?php $logo = get_theme_mod( 'header_logo' );
             if ( $logo ) {
@@ -28,8 +29,9 @@
                 ));
             ?>
         </nav>
-</header>
-
+    </header>
+<div id="container">
+<main id="content" role="main">
 
 
 

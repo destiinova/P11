@@ -1,24 +1,11 @@
 </main>
         </div>
-
-
-
-        <footer>
-    <nav class="footer-menu">
-        <?php
-            wp_nav_menu(array(
-                'theme_location' => 'footer-menu',
-                'menu_class' => 'menu',
-                'container' => false,
-            ));
-        ?>
-    </nav>
-        </footer>
-
-
-
-
+            <footer>
+            <?php wp_footer(); ?>
+          <?php wp_nav_menu(['theme_location' => 'footer-menu','container' => false,'menu_class' => 'footer-menu']) ?>
+            </footer>
         </div>
+
 </body>
 </html>
 
