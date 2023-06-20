@@ -25,33 +25,23 @@ add_action('after_setup_theme', 'montheme_supports');
 
 
  
-// MENU PRINCIPAL
+// MENU PRINCIPAL + MENU PIED DE PAGE
     // Ajoute le support du menu dans ton thème
     add_theme_support('menus');
 
     // Enregistre le menu principal
-    function register_my_menu() {
-        register_nav_menu('primary-menu', __('Primary Menu'));
+    function register_my_menus() {
+        register_nav_menus(
+            array(
+            'primary-menu', __('Menu en tête'),
+            'footer-menu', __('Menu pied de page'),
+            ));
     }
-    add_action('init', 'register_my_menu');
-
-    // Affiche le menu principal
-    wp_nav_menu(array(
-        'theme_location' => 'primary-menu',
-        'menu_class' => 'menu',
-        'container' => false,
-    ));
-
-// MENU PIED DE PAGE
-function register_footer_menu() {
-    register_nav_menu('footer-menu', __('Footer Menu'));
-}
-add_action('init', 'register_footer_menu');
-
+    add_action('init', 'register_my_menus');
 
 function add_search_form($items, $args)
 {
-    if ($args->theme_location == 'footer-menu') {
+    if ($args->theme_location == 'Menu pied de page') {
         $items .= '<li>TOUS DROITS RÉSERVÉS</li>';
     } else {
     }
@@ -63,7 +53,7 @@ add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
 
 function add_search_form2($items, $args)
 {
-    if ($args->theme_location == 'main-header') {
+    if ($args->theme_location == 'Menu en tête') {
         $items .= '<button id="myBtn" class="myBtn contact header " > Contact</button>';
     } else {
     }

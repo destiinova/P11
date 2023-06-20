@@ -23,7 +23,7 @@
             <!--APPARITION NAVIGATION-->
             <?php
                 wp_nav_menu(array(
-                    'theme_location' => 'primary-menu',
+                    'theme_location' => 'Menu en tête',
                     'menu_class' => 'menu',
                     'container' => false,
                 ));
