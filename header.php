@@ -13,14 +13,13 @@
 </head>
 <body>
 <header>
-<nav class="main-menu">
-            <!--APPARITION LOGO HEADER-->
+<nav role="naviguation" class="main-menu">
+<!--APPARITION LOGO HEADER-->
             <?php $logo = get_theme_mod( 'header_logo' );
             if ( $logo ) {
               echo '<a href="'. home_url().'"> <img class="headerlogo" src="' . esc_url( $logo ) . '" alt="Header Logo"></a>';
             } ?>
-
-            <!--APPARITION NAVIGATION-->
+<!--APPARITION NAVIGATION-->
             <?php
                 wp_nav_menu(array(
                     'theme_location' => 'Menu en tête',
@@ -30,6 +29,7 @@
             ?>
         </nav>
     </header>
+    <?php include_once('menu.php'); ?>
 <div id="container">
 <main id="content" role="main">
 

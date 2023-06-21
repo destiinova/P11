@@ -29,7 +29,7 @@ add_action('after_setup_theme', 'montheme_supports');
     // Ajoute le support du menu dans ton thème
     add_theme_support('menus');
 
-    // Enregistre le menu principal
+    // Enregistre les menus
     function register_my_menus() {
         register_nav_menus(
             array(
@@ -41,7 +41,7 @@ add_action('after_setup_theme', 'montheme_supports');
 
 function add_search_form($items, $args)
 {
-    if ($args->theme_location == 'Menu pied de page') {
+    if ($args->theme_location == 'footer-menu') {
         $items .= '<li>TOUS DROITS RÉSERVÉS</li>';
     } else {
     }
@@ -49,17 +49,6 @@ function add_search_form($items, $args)
     return $items;
 }
 add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
-
-
-function add_search_form2($items, $args)
-{
-    if ($args->theme_location == 'Menu en tête') {
-        $items .= '<button id="myBtn" class="myBtn contact header " > Contact</button>';
-    } else {
-    }
-
-    return $items;
-}
 
 // Fonction pour ajouter une section "Header Logo" dans le customizer
 function ajout_customizer_section( $wp_customize ) {
@@ -83,6 +72,26 @@ function ajout_customizer_champ( $wp_customize ) {
  add_action( 'customize_register', 'ajout_customizer_champ' );
 
  ?>
+
+<php require_once 'menu.php'; ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

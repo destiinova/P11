@@ -1,15 +1,58 @@
 //MENU BURGER// 
-/* Sélection des éléments HTML */
-let link = document.getElementById('link')
-let burger = document.getElementById('burger')
-let ul = document.querySelector('ul')
+const button = document.querySelector('.buttonmenu');
+const nav = document.querySelector('.navnewmenu');
+const backdrop = document.querySelector('.backdrop');
+const remove = document.querySelector('.site-main');
+const remove2 = document.querySelector('footer');
+const remove3 = document.querySelector('.phpfooter');
+button.addEventListener('click', () => {
+  nav.classList.toggle('open');
+  remove.classList.toggle('remove');
+  remove2.classList.toggle('remove');
+  remove3.classLis.toggle('remove');
 
-/* gestionnaire d'événement sur le a#link pour venir changer l'attribution de la classe .open à la ul et au span#burger */
-link.addEventListener('click', function(e) {
-  e.preventDefault()
-  burger.classList.toggle('open')
-  ul.classList.toggle('open')
-})
+});
+
+backdrop.addEventListener('click', () => {
+  nav.classList.remove('open');
+  remove.classList.remove('remove');
+  remove2.classList.remove('remove');
+  remove3.classList.remove('remove');
+});
+
+// button burger 
+const burger= document.querySelector('.buttonmenu'); 
+burger.addEventListener('click', ()=> {
+  burger.classList.toggle('activee');
+  animemenu.classList.add('animationhaut');
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //MODALE FORMS//
