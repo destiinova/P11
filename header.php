@@ -14,18 +14,17 @@
 <body>
 <header>
 <nav role="naviguation" class="main-menu">
-<!--APPARITION LOGO HEADER-->
+<!-------------------------APPARITION LOGO HEADER----------------------->
             <?php $logo = get_theme_mod( 'header_logo' );
             if ( $logo ) {
               echo '<a href="'. home_url().'"> <img class="headerlogo" src="' . esc_url( $logo ) . '" alt="Header Logo"></a>';
             } ?>
-<!--APPARITION NAVIGATION-->
-            <?php
-                wp_nav_menu(array(
-                    'theme_location' => 'Menu en tête',
-                    'menu_class' => 'menu',
-                    'container' => false,
-                ));
+<!------------------------APPARITION NAVIGATION------------------->
+            <?php wp_nav_menu([
+                'theme_location' => 'header', 
+                'container' => false, 
+                'menu_class' => 'menu-header'
+                    ]) 
             ?>
         </nav>
     </header>

@@ -2,13 +2,12 @@
         </div>
             <footer>
             <nav class="main-footer">
-            <?php
-                wp_nav_menu(array(
-                 'theme_location' => 'Menu pied de page',
-                 'menu_class' => 'my-footer-menu', 
-                 'container' => false,
-                ));
-             ?>
+            <?php wp_nav_menu([
+                'theme_location' => 'footer',
+                'container' => false,
+                'menu_class' => 'my-footer-menu'
+                ]) 
+            ?>
             </nav>
             </footer>
         </div>

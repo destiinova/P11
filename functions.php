@@ -14,34 +14,23 @@ function script()
 }
 add_action('wp_enqueue_scripts', 'script');
 
-// Ajout personnalisation du thème
+// ---------------------------- Ajout personnalisation du thème
 function montheme_supports()
 {
+    // Ajoute le support du menu dans ton thème
+    add_theme_support('menus');
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     add_theme_support('html5', array('search-form', 'comment-form', 'comment-list', 'gallery', 'caption'));
+    // Enregistre les menus
+    register_nav_menu('header', 'Menu en tête');
+    register_nav_menu('footer', 'Menu pied de page');
 }
 add_action('after_setup_theme', 'montheme_supports');
-
-
- 
-// MENU PRINCIPAL + MENU PIED DE PAGE
-    // Ajoute le support du menu dans ton thème
-    add_theme_support('menus');
-
-    // Enregistre les menus
-    function register_my_menus() {
-        register_nav_menus(
-            array(
-            'primary-menu', __('Menu en tête'),
-            'footer-menu', __('Menu pied de page'),
-            ));
-    }
-    add_action('init', 'register_my_menus');
-
+    // HOOK -> texte non écrit dans le backoffice de WP
 function add_search_form($items, $args)
 {
-    if ($args->theme_location == 'footer-menu') {
+    if ($args->theme_location == 'footer') {
         $items .= '<li>TOUS DROITS RÉSERVÉS</li>';
     } else {
     }
@@ -49,7 +38,7 @@ function add_search_form($items, $args)
     return $items;
 }
 add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
-
+ 
 // Fonction pour ajouter une section "Header Logo" dans le customizer
 function ajout_customizer_section( $wp_customize ) {
     $wp_customize->add_section( 'header_logo_section' , array(
@@ -73,7 +62,6 @@ function ajout_customizer_champ( $wp_customize ) {
 
  ?>
 
-<php require_once 'menu.php'; ?>
 
 
 
@@ -119,28 +107,6 @@ if ( !function_exists( 'chld_thm_cfg_parent_css' ) ):
     }
 endif;
 add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css', 10 );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
