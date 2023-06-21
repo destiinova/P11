@@ -37,6 +37,8 @@ html{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .main-footer{
@@ -81,6 +83,9 @@ html{
     .buttonmenu{
           /*mode activé en mobile*/
         display: block!important;
+    }
+    .headerlogo{
+        width: 138px; 
     }
 }
 
@@ -135,7 +140,7 @@ html{
     display: none;
     width: 100vw;
     height: 100vh;
-    background-color: red;
+    background-color: #E00000;
     margin-top: 2%;
 }
 
@@ -148,31 +153,21 @@ html{
     display: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-    .buttonmenu span{
+.buttonmenu span{
         width: 100%;
-        height: 4px;
+        height: 2px;
         background-color: #000000;
         display: block;
         position:absolute;
         top:50%;
         transform: translateY(-50%);
         transition: backround-color 0.5s ease-in-out;
-    }
+}
     .buttonmenu span::before, .buttonmenu span::after {
         content: '';
         position: absolute;
         width: 100%;
-        height: 4px;
+        height: 2px;
         background-color: #000000
     }
     .buttonmenu span::before{
@@ -202,19 +197,20 @@ html{
         text-decoration: none;
         color: white;
         font-family: 'Space Mono';
-        font-size: 23px;
+        font-size: 44px;
         font-weight: 400;
-        line-height: 34px;
-        letter-spacing: 0em;
-        text-align: center;
+        line-height: 65px;
+        display: flex;
+        justify-content: center;
         text-transform: uppercase;
+        padding: 10px;
+        margin-left: 0;
     }
     
     .open {
         display: flex;
         justify-content: center;
         align-items: center;
-    
     }
     
     .backdrop {
@@ -223,9 +219,10 @@ html{
         left: -6312px;
         right: 0;
         bottom: 0;
-        background: red;
+        background: #E00000;
         cursor: pointer;
         animation: fade .1s;
+        margin-top: 100px;
     }
 
     .remove {
@@ -248,4 +245,84 @@ html{
 .openburger{
     display: block;
 
+}
+.contactburger{
+    border: none;
+    color: white;
+    background: red;
+    font-family: Space Mono;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-left: -7%;
+}
+/* --------------------------------------------------------------------------------------- MODALE CONTACT ------------------------------------------------------------------------------------*/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.modal-header {
+    background-image: url(./assets/images/Contact_header.png);
+    height: 106.05px;
+    margin-top: 18px;
+    margin-bottom: 40px;
+}
+.modal-body {
+    padding: 2px 16px;
+}
+
+/* Styles spécifiques aux écrans plus petits */
+@media (max-width: 768px){
+    .modal-header {
+        background-image: url(./assets/images/Contact_header.png);
+        height: 55px;
+        margin-top: 18px;
+        margin-bottom: 40px;
+    }
+    form.wpcf7-form input[type="submit"] {
+        padding: 16px 69px 16px 69px; /* Ajout d'un espace dans le bouton sur mobile */
+        }
+}
+
+.form.wpcf7-form {
+    background: transparent; /* Couleur du fond du formulaire */
+    padding: 2em;
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    border-radius: 2px;
+}
+form.wpcf7-form input[type="submit"] {
+    width: 52px;
+    height: 18px;
+    padding: 16px 105.5px 16px 105.5px; /* Ajout d'un espace dans le bouton */
+    border: 2px solid #010f18; /* Bordure du bouton */
+    background: #D8D8D8; /* Couleur de fond du bouton */
+    color: #000000; /* Couleur du texte du bouton */
+    text-decoration:none;  /* Supprime soulignement */
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
 }
