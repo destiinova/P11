@@ -10,7 +10,7 @@ function script()
     wp_enqueue_script('modal', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0', true);
     wp_enqueue_script('ajax', get_template_directory_uri() . '/js/ajax.js', array('jquery'), '1.0', true);
     wp_enqueue_script('lightbox', get_template_directory_uri() . '/js/lightbox.js', array('jquery'), '1.0', true);
-    wp_enqueue_script('burger', get_template_directory_uri() . '/js/menu.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('burger', get_template_directory_uri() . '/JS/scripts.js', array('jquery'), '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'script');
 

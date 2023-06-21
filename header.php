@@ -19,6 +19,9 @@
             if ( $logo ) {
               echo '<a href="'. home_url().'"> <img class="headerlogo" src="' . esc_url( $logo ) . '" alt="Header Logo"></a>';
             } ?>
+        <div class="buttonmenu"> 
+        <span></span>
+        </div>
 <!------------------------APPARITION NAVIGATION------------------->
             <?php wp_nav_menu([
                 'theme_location' => 'header', 

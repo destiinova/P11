@@ -1,15 +1,17 @@
+console.log('test')
+
 //MENU BURGER// 
 const button = document.querySelector('.buttonmenu');
 const nav = document.querySelector('.navnewmenu');
 const backdrop = document.querySelector('.backdrop');
-const remove = document.querySelector('.site-main');
+const remove = document.querySelector('#content');
 const remove2 = document.querySelector('footer');
-const remove3 = document.querySelector('.phpfooter');
+const menuburger = document.querySelector('.menuburger');
 button.addEventListener('click', () => {
+  menuburger.classList.toggle('openburger');
   nav.classList.toggle('open');
   remove.classList.toggle('remove');
   remove2.classList.toggle('remove');
-  remove3.classLis.toggle('remove');
 
 });
 
@@ -24,8 +26,6 @@ backdrop.addEventListener('click', () => {
 const burger= document.querySelector('.buttonmenu'); 
 burger.addEventListener('click', ()=> {
   burger.classList.toggle('activee');
-  animemenu.classList.add('animationhaut');
-
 });
 
 
