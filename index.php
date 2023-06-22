@@ -16,18 +16,5 @@
  <?php get_footer(); ?>
 
 
-<!-- 
-Bouton pour ouvrir la modale 
-<button id="openModalBtn">Ouvrir la modale</button>
-
- Modale 
-<div id="myModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Titre de la modale</h2>
-    <p>Contenu de la modale...</p>
-  </div>
-</div> -->
-
 
 

@@ -246,6 +246,15 @@ html{
     display: block;
 
 }
+
+/* --------------------------------------------------------------------------------------- HOOK CONTACT ------------------------------------------------------------------------------------*/
+#mybtn{
+    background: #FFFFFF;
+}
+
+.mybtn{
+    background: #FFFFFF;
+}
 .contactburger{
     border: none;
     color: white;
@@ -259,9 +268,10 @@ html{
     text-transform: uppercase;
     margin-left: -7%;
 }
+
 /* --------------------------------------------------------------------------------------- MODALE CONTACT ------------------------------------------------------------------------------------*/
 /* The Modal (background) */
-.modal {
+.modale {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -293,6 +303,8 @@ html{
     padding: 2px 16px;
 }
 
+
+/*----------------------------------------------------------------------------------- CONTACT FORM 7 -------------------------------------------------------------------------------------------*/
 /* Styles spécifiques aux écrans plus petits */
 @media (max-width: 768px){
     .modal-header {
@@ -301,23 +313,19 @@ html{
         margin-top: 18px;
         margin-bottom: 40px;
     }
-    form.wpcf7-form input[type="submit"] {
+    input[type=submit]{
         padding: 16px 69px 16px 69px; /* Ajout d'un espace dans le bouton sur mobile */
-        }
+    }
 }
 
-.form.wpcf7-form {
+.formulaire {
     background: transparent; /* Couleur du fond du formulaire */
     padding: 2em;
     border: 1px solid rgba(0, 0, 0, 0.1); 
     border-radius: 2px;
 }
-form.wpcf7-form input[type="submit"] {
-    width: 52px;
-    height: 18px;
-    padding: 16px 105.5px 16px 105.5px; /* Ajout d'un espace dans le bouton */
-    border: 2px solid #010f18; /* Bordure du bouton */
-    background: #D8D8D8; /* Couleur de fond du bouton */
+.envoyer {
+
     color: #000000; /* Couleur du texte du bouton */
     text-decoration:none;  /* Supprime soulignement */
     font-family: 'Space Mono';
@@ -326,3 +334,20 @@ form.wpcf7-form input[type="submit"] {
     font-size: 12px;
     line-height: 18px;
 }
+
+input[type=submit]{
+    background: #D8D8D8; /* Couleur de fond du bouton */
+    width: 52px;
+    height: 18px;
+    padding: 16px 105.5px 16px 105.5px; /* Ajout d'un espace dans le bouton */
+    border: 2px solid #010f18; /* Bordure du bouton */
+}
+
+
+
+#hero-container {
+    position: relative;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+  }

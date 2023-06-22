@@ -12,7 +12,7 @@ get_header(); // Inclure l'en-tête du thème WordPress
         <div class="entry-content">
           <?php the_content(); ?>
         </div>
-        
+<!------------------------------------------------------ CUSTOM POST TYPE ---------------------------------------------------------->       
         <p>Type : <?php echo get_field('type'); ?></p>
         <p>Référence : <?php echo get_field('reference'); ?></p>
       </article>

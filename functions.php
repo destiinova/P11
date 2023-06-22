@@ -1,20 +1,22 @@
 <?php
+// ----------------------------------------------------------------------------- Ajout du CSS pour le site  --------------------------------------------------------------------------------------
 function assets()
 {
     wp_enqueue_style('style', get_template_directory_uri() . '/style.css', array(), '1.0');
 }
 add_action('wp_enqueue_scripts', 'assets');
-
+// ----------------------------------------------------------------------------- Ajout du JS pour le site  --------------------------------------------------------------------------------------
 function script()
 {
     wp_enqueue_script('modal', get_template_directory_uri() . '/JS/modale.js', array('jquery'), '1.0', true);
     wp_enqueue_script('ajax', get_template_directory_uri() . '/js/ajax.js', array('jquery'), '1.0', true);
     wp_enqueue_script('lightbox', get_template_directory_uri() . '/js/lightbox.js', array('jquery'), '1.0', true);
     wp_enqueue_script('burger', get_template_directory_uri() . '/JS/menu-burger.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('burger', get_template_directory_uri() . '/JS/hero.js', array('jquery'), '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'script');
 
-// ---------------------------- Ajout personnalisation du thème
+// ----------------------------------------------------------------------------- Ajout personnalisation du thème -----------------------------------------------------------------------------
 function montheme_supports()
 {
     // Ajoute le support du menu dans ton thème
@@ -27,7 +29,7 @@ function montheme_supports()
     register_nav_menu('footer', 'Menu pied de page');
 }
 add_action('after_setup_theme', 'montheme_supports');
-    // HOOK -> texte non écrit dans le backoffice de WP
+    // ------------------------------------------------------------------------- HOOK -> texte non écrit dans le backoffice de WP --------------------------------------------------------------
 function add_search_form($items, $args)
 {
     if ($args->theme_location == 'footer') {
@@ -38,8 +40,21 @@ function add_search_form($items, $args)
     return $items;
 }
 add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
- 
-// Fonction pour ajouter une section "Header Logo" dans le customizer
+
+// ------------------------------------------------------------------------- HOOK -> onglet "contact" du menu principal, n'affichera pas de page --------------------------------------------------------------
+//function afficher_modale_contact_form7() {
+    // Vérifier si la page actuelle contient le formulaire de Contact Form 7
+   // if (is_page('Contact')) {
+        // Ajouter le code HTML pour la modale ici
+      //  echo '<div id="modale-contact-form" class="modale">';
+      //  echo 'Contenu de la modale Contact Form 7';
+      //  echo '</div>';
+  //  }
+//}
+
+//add_action('wp_head', 'afficher_modale_contact_form7');
+
+// ----------------------------------------------------------------- Fonction pour ajouter une section "Header Logo" dans le customizer --------------------------------------------
 function ajout_customizer_section( $wp_customize ) {
     $wp_customize->add_section( 'header_logo_section' , array(
        'title'       => __( 'Header Logo', 'motaphoto' ),
@@ -49,7 +64,7 @@ function ajout_customizer_section( $wp_customize ) {
  }
  add_action( 'customize_register', 'ajout_customizer_section' );
 
-// Fonction pour ajouter les champs "Header Logo" dans le customizer
+// ------------------------------------------------------------------ Fonction pour ajouter les champs "Header Logo" dans le customizer ------------------------------------------------------------------
 function ajout_customizer_champ( $wp_customize ) {
     $wp_customize->add_setting( 'header_logo' );
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'header_logo', array(

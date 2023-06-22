@@ -14,7 +14,7 @@
 <body>
 <header>
 <nav role="naviguation" class="main-menu">
-<!-------------------------APPARITION LOGO HEADER----------------------->
+<!------------------------- APPARITION LOGO HEADER ----------------------->
             <?php $logo = get_theme_mod( 'header_logo' );
             if ( $logo ) {
               echo '<a href="'. home_url().'"> <img class="headerlogo" src="' . esc_url( $logo ) . '" alt="Header Logo"></a>';
@@ -22,18 +22,21 @@
         <div class="buttonmenu"> 
         <span></span>
         </div>
-<!------------------------APPARITION NAVIGATION------------------->
+<!------------------------ APPARITION NAVIGATION ------------------->
             <?php wp_nav_menu([
                 'theme_location' => 'header', 
                 'container' => false, 
                 'menu_class' => 'menu-header'
                     ]) 
             ?>
+<!------------------------ APPEL LE HOOK ------------------->
+         <!--   <?php afficher_modale_contact_form7_header(); ?>-->
         </nav>
     </header>
     <?php include_once('menu.php'); ?>
+    <!-- ouvrir/fermer The Modal -->
 <div id="container">
-<main id="content" role="main">
+<main id="content hero-container" role="main">
 
 
 
