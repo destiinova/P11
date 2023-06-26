@@ -87,17 +87,14 @@ html{
     .headerlogo{
         width: 138px; 
     }
-    .contactburger{
-            border: none;
-            color: white;
-            background: #E00000;
-            font-family: Space Mono;
-            font-size: 23px;
-            font-weight: 400;
-            line-height: 34px;
-            letter-spacing: 0em;
-            text-align: center;
-            text-transform: uppercase;
+    #myBtn{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-size: 44px;
+        margin-right: 10px;
+        color: #FFFFFF;
+        padding-top: 20px;
     }
 }
 
@@ -287,7 +284,6 @@ button{
 /* --------------------------------------------------------------------------------------- MODALE CONTACT ------------------------------------------------------------------------------------*/
 /* The Modal (background) */
 .modal {
-    display: none; 
     position: fixed; 
     z-index: 1; 
     left: 0;
@@ -302,10 +298,11 @@ button{
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /
+    margin: 15% auto; /*pour centrer la modal*/
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%; 
+    border: 5px solid #000000;
+    width: 597px;
+    height: 769px;
 }
 
 .modal-header {
@@ -322,42 +319,69 @@ button{
 /* Styles spécifiques aux écrans plus petits */
 @media (max-width: 768px){
     .modal-header {
-        background-image: url(./assets/images/Contact_header.png);
         height: 55px;
         margin-top: 18px;
-        margin-bottom: 40px;
+    }
+    .modal-content {
+        width: 286px;
+        height: 583px;
     }
     input[type=submit]{
-        padding: 16px 69px 16px 69px; /* Ajout d'un espace dans le bouton sur mobile */
+        width: 190px;
+        height: 50px;
+        margin-left: 15px;
     }
+    input[type=email]{
+        width: 190px;
+        height: 40px;
+    }
+    input[type=text]{
+        width: 190px;
+        height: 149px;
+    }
+    textarea{
+        width: 190px;
+        height: 40px;
+    }
+
 }
 
 .formulaire {
     background: transparent; /* Couleur du fond du formulaire */
-    padding: 2em;
-    border: 1px solid rgba(0, 0, 0, 0.1); 
-    border-radius: 2px;
+    flex-direction: column;
 }
 .envoyer {
+    align-items: center;
+    justify-content: center;
 
-    color: #000000; /* Couleur du texte du bouton */
-    text-decoration:none;  /* Supprime soulignement */
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
 }
 
 input[type=submit]{
-    background: #D8D8D8; /* Couleur de fond du bouton */
-    width: 52px;
-    height: 18px;
-    padding: 16px 105.5px 16px 105.5px; /* Ajout d'un espace dans le bouton */
-    border: 2px solid #010f18; /* Bordure du bouton */
+    display: flex;
+    width: 263px;
+    height: 50px;
+    padding: 8px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 2px;
+    background: #D8D8D8;
+    color: #000;
+    font-size: 12px;
+    font-family: 'Space Mono';
+    margin-left: 150px;
 }
 
-
+label{
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+    color: #313144;
+    font-size: 12px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    text-transform: uppercase;
+}
 
 #hero-container {
     position: relative;
@@ -365,3 +389,46 @@ input[type=submit]{
     background-size: cover;
     background-position: center;
   }
+input[type=email]{
+    display: flex;
+    width: 260px;
+    height: 40px;
+    padding: 1px 0px 0px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid #B8BBC2;
+    background: #FFF;
+}
+
+input[type=text]{
+    display: flex;
+    width: 263px;
+    height: 40px;
+    padding: 1px 0px 0px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid #B8BBC2;
+    background: #FFF;
+}
+textarea{
+    display: flex;
+    width: 263px;
+    height: 210px;
+    padding: 1px 0px 0px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid #B8BBC2;
+    background: #FFF;
+}
