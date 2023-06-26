@@ -29,12 +29,10 @@
                 'menu_class' => 'menu-header'
                     ]) 
             ?>
-<!------------------------ APPEL LE HOOK ------------------->
-         <!--   <?php afficher_modale_contact_form7_header(); ?>-->
         </nav>
     </header>
     <?php include_once('menu.php'); ?>
-    <!-- ouvrir/fermer The Modal -->
+    <?php include_once('template-parts/modal-contact.php'); ?>
 <div id="container">
 <main id="content hero-container" role="main">
 

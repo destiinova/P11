@@ -8,7 +8,7 @@ add_action('wp_enqueue_scripts', 'assets');
 // ----------------------------------------------------------------------------- Ajout du JS pour le site  --------------------------------------------------------------------------------------
 function script()
 {
-    wp_enqueue_script('modal', get_template_directory_uri() . '/JS/modale.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('modale', get_template_directory_uri() . '/JS/modale.js', array('jquery'), '1.0', true);
     wp_enqueue_script('ajax', get_template_directory_uri() . '/js/ajax.js', array('jquery'), '1.0', true);
     wp_enqueue_script('lightbox', get_template_directory_uri() . '/js/lightbox.js', array('jquery'), '1.0', true);
     wp_enqueue_script('burger', get_template_directory_uri() . '/JS/menu-burger.js', array('jquery'), '1.0', true);
@@ -42,17 +42,17 @@ function add_search_form($items, $args)
 add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
 
 // ------------------------------------------------------------------------- HOOK -> onglet "contact" du menu principal, n'affichera pas de page --------------------------------------------------------------
-//function afficher_modale_contact_form7() {
-    // Vérifier si la page actuelle contient le formulaire de Contact Form 7
-   // if (is_page('Contact')) {
-        // Ajouter le code HTML pour la modale ici
-      //  echo '<div id="modale-contact-form" class="modale">';
-      //  echo 'Contenu de la modale Contact Form 7';
-      //  echo '</div>';
-  //  }
-//}
+function add_search_form2($items, $args)
+{
+    if ($args->theme_location == 'header') {
+        $items .= '<button id="myBtn" class="myBtn contactburger ">Contact</button>';
+    } else {
+    }
 
-//add_action('wp_head', 'afficher_modale_contact_form7');
+    return $items;
+}
+add_filter('wp_nav_menu_items', 'add_search_form2', 10, 2);
+
 
 // ----------------------------------------------------------------- Fonction pour ajouter une section "Header Logo" dans le customizer --------------------------------------------
 function ajout_customizer_section( $wp_customize ) {
