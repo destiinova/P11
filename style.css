@@ -92,12 +92,12 @@ html{
         align-items: center;
         text-align: center;
         font-size: 44px;
-        margin-right: 10px;
         color: #FFFFFF;
-        padding-top: 20px;
     }
+    .contactburger{
+        padding-left : 0px;
 }
-
+}
 .buttonmenu {
     width: 42px;
     height: 24px;
@@ -200,6 +200,7 @@ html{
     
     .newul {
         list-style-type: none;
+		padding:0;
     }
 
     .newul a {
@@ -278,13 +279,14 @@ button{
     align-items: center;
     justify-content: flex-end;
     text-transform: uppercase;
-    padding-left: 50px;
+    padding-left: 50px; 
 }
 
 /* --------------------------------------------------------------------------------------- MODALE CONTACT ------------------------------------------------------------------------------------*/
 /* The Modal (background) */
 .modal {
     position: fixed; 
+    display: none;
     z-index: 1; 
     left: 0;
     top: 0;
@@ -323,8 +325,9 @@ button{
         margin-top: 18px;
     }
     .modal-content {
-        width: 286px;
-        height: 583px;
+        width: 98vw;
+        margin: 0;
+        padding: 0;
     }
     input[type=submit]{
         width: 190px;
@@ -334,35 +337,39 @@ button{
     input[type=email]{
         width: 190px;
         height: 40px;
+        margin-left: 15px;
     }
     input[type=text]{
         width: 190px;
         height: 149px;
+        margin-left: 15px;
     }
     textarea{
         width: 190px;
         height: 40px;
+        margin-left: 15px;
     }
 
 }
 
 .formulaire {
     background: transparent; /* Couleur du fond du formulaire */
-    flex-direction: column;
+    display: flex;
+	flex-direction:row;
+    /*justify-content: center;*/
 }
 .envoyer {
     align-items: center;
     justify-content: center;
-
 }
 
 input[type=submit]{
-    display: flex;
+   /* display: flex;
     width: 263px;
     height: 50px;
     padding: 8px 15px;
     justify-content: center;
-    align-items: center;
+    align-items: center;*/
     gap: 10px;
     border-radius: 2px;
     background: #D8D8D8;
@@ -393,7 +400,6 @@ input[type=email]{
     display: flex;
     width: 260px;
     height: 40px;
-    padding: 1px 0px 0px 0px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -408,7 +414,6 @@ input[type=text]{
     display: flex;
     width: 263px;
     height: 40px;
-    padding: 1px 0px 0px 0px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -422,7 +427,6 @@ textarea{
     display: flex;
     width: 263px;
     height: 210px;
-    padding: 1px 0px 0px 0px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -431,4 +435,10 @@ textarea{
     border-radius: 8px;
     border: 1px solid #B8BBC2;
     background: #FFF;
+}
+
+.wpcf7-text {
+    height: 40px;
+    width: 263px;
+    border: 1px solid #000000;
 }

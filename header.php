@@ -29,10 +29,11 @@
                 'menu_class' => 'menu-header'
                     ]) 
             ?>
+                <?php include_once('menu.php'); ?>
+                <?php include_once('template-parts/modal-contact.php'); ?>
         </nav>
     </header>
-    <?php include_once('menu.php'); ?>
-    <?php include_once('template-parts/modal-contact.php'); ?>
+
 <div id="container">
 <main id="content hero-container" role="main">
 

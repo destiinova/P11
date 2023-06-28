@@ -9,10 +9,9 @@ add_action('wp_enqueue_scripts', 'assets');
 function script()
 {
     wp_enqueue_script('modale', get_template_directory_uri() . '/JS/modale.js', array('jquery'), '1.0', true);
-    wp_enqueue_script('ajax', get_template_directory_uri() . '/js/ajax.js', array('jquery'), '1.0', true);
-    wp_enqueue_script('lightbox', get_template_directory_uri() . '/js/lightbox.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('ajax', get_template_directory_uri() . '/JS/ajax.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('lightbox', get_template_directory_uri() . '/JS/lightbox.js', array('jquery'), '1.0', true);
     wp_enqueue_script('burger', get_template_directory_uri() . '/JS/menu-burger.js', array('jquery'), '1.0', true);
-    wp_enqueue_script('burger', get_template_directory_uri() . '/JS/hero.js', array('jquery'), '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'script');
 
