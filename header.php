@@ -10,6 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Space+Mono&display=swap" rel="stylesheet">
     <?php wp_head() ?>
+    <script>
+        $(document).ready(function () {
+            var maref = "<?php echo get_post_meta(get_the_ID(), 'reference', true); ?>";
+            $("#refphoto").val(maref);
+        });
+    </script>
 </head>
 <body>
 <header>
@@ -31,7 +37,8 @@
             ?>
                 <?php include_once('menu.php'); ?>
                 <?php include_once('template-parts/modal-contact.php'); ?>
-        </nav>
+                <?php include_once "template_parts/lightbox.php";?>
+            </nav>
     </header>
 
 <div id="container">
