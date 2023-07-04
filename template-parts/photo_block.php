@@ -50,7 +50,7 @@
                             </div>
                             <div class="divoeil">
                                 <a href="<?php the_permalink(); ?>"><img
-                                        src="<?php echo get_stylesheet_directory_uri(); ?>/asset/oeil.png " alt="oeil"> </a>
+                                        src="<?php echo get_stylesheet_directory_uri(); ?>/assets/oeil.png " alt="oeil"> </a>
                             </div>
                             <div class="divfullscreen">
                             <button class="buttonlightbox buttonaimerezaussi" data-titre="<?php the_title(); ?>" data-date="<?php $post_date = get_the_date('Y');
@@ -68,7 +68,7 @@
                                    // Concatène les noms des catégories avec une virgule comme séparateur
                                }
                                ?>"><img class="fullscreen"
-                               src="<?php echo get_stylesheet_directory_uri(); ?> '/asset/fullscreen.png' " alt="fullscreen">"></button>
+                               src="<?php echo get_stylesheet_directory_uri(); ?>/assets/fullscreen.png " alt="fullscreen">"></button>
                             </div>
                         </div>
                     </div>

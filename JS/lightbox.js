@@ -1,4 +1,4 @@
-$(document).ready(function() {
+jQuery(document).ready(function() {
   // Sélectionner l'élément de la lightbox
   var lightbox = document.querySelector('.lightbox');
 

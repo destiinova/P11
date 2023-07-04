@@ -128,7 +128,7 @@ function wpb_rand_posts()
         wp_reset_postdata();
     } else {
 
-        $string .= 'aucun article disponible';
+        $string .= 'Aucun article disponible';
     }
 
     return $string;
@@ -210,7 +210,7 @@ function filter_post()
                             </div>
                             <div class="divoeil">
                                 <a href="<?php the_permalink(); ?>"><img
-                                        src="<?php echo get_stylesheet_directory_uri(); ?>/asset/oeil.png" alt="oeil"></a>
+                                        src="<?php echo get_stylesheet_directory_uri(); ?>/assets/oeil.png" alt="oeil"></a>
                             </div>
                             <div class="divfullscreen">
                             <button class="buttonlightbox" data-titre="<?php the_title(); ?>" data-date="<?php $post_date = get_the_date('Y');
@@ -227,7 +227,7 @@ function filter_post()
                                    echo implode(', ', $category_names);
                                    // Concatène les noms des catégories avec une virgule comme séparateur
                                }
-                               ?>"><img src="wp-content\themes\motaphoto\asset\fullscreen.png"></button>
+                               ?>"><img src="wp-content\themes\motaphoto\assets\fullscreen.png"></button>
                     </div>
                             </div>
                         </div>

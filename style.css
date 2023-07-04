@@ -21,39 +21,42 @@ Version: 2023
     /* Styles spécifiques pour les grands écrans */
   }
 
-h2{
-    font-size: 66px;
-    font-style: italic;
-    line-height: 58px;
-    text-transform: uppercase;
-}
+body {
+    margin: auto;
+    padding: 0;
+    max-width: 1440px;
+    font-family: 'Space Mono';
+    z-index: 1;
 
-h3{
-    font-size: 18px;
-    letter-spacing: 1.8px;
-    text-transform: uppercase;
 
 }
 
-p{
-    font-size: 14px;
-    font-family: 'Poppins';
-    font-weight: 300;
+.menu_footer a,
+.chargerplus a,
+.post_description a,
+.btntoutephoto a {
+    color: black;
 }
 
-.description p a{
-    font-size: 14px;
-    letter-spacing: 1.4px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #000000;
-}
-
-
-body{
+.container {
     margin: 0;
     padding: 0;
 }
+
+a {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+h2 {
+    font-family: 'Space Mono';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0.1em;
+
+}
+
 
 html{
     font-family: 'space mono';
@@ -348,130 +351,108 @@ button{
 
 
 /*----------------------------------------------------------------------------------- CONTACT FORM 7 -------------------------------------------------------------------------------------------*/
-/* Styles spécifiques aux écrans plus petits */
-@media (max-width: 768px){
-    .modal-header {
-        height: 55px;
-        margin-top: 18px;
-    }
-    .modal-content {
-        width: 98vw;
-        margin: 0;
-        padding: 0;
-    }
-    input[type=submit]{
-        width: 190px;
-        height: 50px;
-        margin-left: 15px;
-    }
-    input[type=email]{
-        width: 190px;
-        height: 40px;
-        margin-left: 15px;
-    }
-    input[type=text]{
-        width: 190px;
-        height: 149px;
-        margin-left: 15px;
-    }
-    textarea{
-        width: 190px;
-        height: 40px;
-        margin-left: 15px;
-    }
-
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+.modal-content {
+    width: 597px;
+    /* Full width */
+    height: 769px;
+    background-color: #fefefe;
+    margin: auto;   
+    z-index: 100;
+    border: 5px solid #000000;
 }
 
-.formulaire {
-    background: transparent; /* Couleur du fond du formulaire */
-    display: flex;
-	flex-direction:row;
-    /*justify-content: center;*/
-}
-.envoyer {
-    align-items: center;
-    justify-content: center;
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-input[type=submit]{
-   /* display: flex;
-    width: 263px;
-    height: 50px;
-    padding: 8px 15px;
-    justify-content: center;
-    align-items: center;*/
-    gap: 10px;
-    border-radius: 2px;
-    background: #D8D8D8;
+.close:hover,
+.close:focus {
     color: #000;
-    font-size: 12px;
-    font-family: 'Space Mono';
-    margin-left: 150px;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-label{
+/* Formulaire de contact */
+.contact1 {
     display: flex;
-    flex-direction: column;
-    margin-left: 150px;
-    color: #313144;
-    font-size: 12px;
-    font-family: 'Poppins';
-    font-weight: 500;
-    text-transform: uppercase;
-}
-
-#hero-container {
-    position: relative;
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-  }
-input[type=email]{
-    display: flex;
-    width: 260px;
-    height: 40px;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 4px;
-    flex-shrink: 0;
-    border-radius: 8px;
-    border: 1px solid #B8BBC2;
-    background: #FFF;
 }
 
-input[type=text]{
+.contact1_envoyer {
     display: flex;
+    justify-content: center;
+}
+
+.wpcf7-form-control {
+    background-color: #fff;
+
+}
+
+/* Message  */
+.wpcf7-textarea {
+    height: 142px;
     width: 263px;
-    height: 40px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    flex-shrink: 0;
-    border-radius: 8px;
-    border: 1px solid #B8BBC2;
-    background: #FFF;
-}
-textarea{
-    display: flex;
-    width: 263px;
-    height: 210px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    flex-shrink: 0;
-    border-radius: 8px;
-    border: 1px solid #B8BBC2;
-    background: #FFF;
+    border: 1px solid #000000;
+
 }
 
+/* Nom email et ref photo */
 .wpcf7-text {
     height: 40px;
     width: 263px;
     border: 1px solid #000000;
 }
+
+/* Bouton envoyé  */
+
+
+.wpcf7-submit {
+    border-left: 4px black solid;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    height: 38px;
+    width: 214px;
+    font-family: 'Space Mono';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+    text-align: center;
+
+}
+
+/* backround_contact */
+.backround_contact {
+    background: url(Contact.png)
+}
+
 
 
 /*----------------------------------------------------------------------------------- WP_QUERY -------------------------------------------------------------------------------------------*/
@@ -495,7 +476,7 @@ textarea{
 }
 
 .post_contant h1 {
-    font-family: Space Mono;
+    font-family: 'Space Mono';
     font-size: 66px;
     font-style: italic;
     font-weight: 400;
@@ -505,7 +486,7 @@ textarea{
 }
 
 .post_contant p {
-    font-family: Space Mono;
+    font-family: 'Space Mono';
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
@@ -515,7 +496,6 @@ textarea{
 
 .post_image {
     width: 40vw;
-
 
 }
 
@@ -594,7 +574,7 @@ textarea{
     border-bottom: none;
     height: 38px;
     width: 214px;
-    font-family: Space Mono;
+    font-family: 'Space Mono';
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
@@ -664,8 +644,6 @@ textarea{
     height: 29vw;
     width: 29vw;
 }
-
-
 
 #load-more {
     border-radius: 2px;
@@ -806,7 +784,7 @@ textarea{
 }
 /* Filtre */
 .filtre label {
-    font-family: Poppins;
+    font-family: 'Poppins';
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
@@ -1134,8 +1112,6 @@ textarea{
     z-index: 12;
 }
 
-
-
 .lightbox__container {
     display: flex;
     align-items: center;
@@ -1294,4 +1270,15 @@ textarea{
 .title {
     display: flex;
     justify-content: space-between;
+}
+
+/*-------------------------------------------------------------- Animation-------------------------------------------- */
+@keyframes bouton {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(97px);
+    }
 }

@@ -1,7 +1,9 @@
+
+
 // FONCTION AJAX pour charger les photos
-$('#load-more').on('click', function () {
+jQuery('#load-more').on('click', function () {
   currentPage++; //currentPage + 1, car nous voulons charger la page suivante
-$.ajax({
+  jQuery.ajax({
   type: 'POST',
   url: 'http://photographe-event.local/wp-admin/admin-ajax.php',
   dataType: 'html',
@@ -10,7 +12,7 @@ $.ajax({
     paged: currentPage,
   },
   success: function (res) {
-    $('.photo_toutephoto').append(res);
+    jQuery('.photo_toutephoto').append(res);
   }
 });
 });
@@ -37,8 +39,8 @@ jQuery('#cat1, #format1, #date1').on('change', function() {
     url: 'http://photographe-event.local/wp-admin/admin-ajax.php',
     data: data,
     success: function(res) {
-      $('.photo_toutephoto').html(res);
-      $('.chargerplus').empty();
+      jQuery('.photo_toutephoto').html(res);
+      jQuery('.chargerplus').empty();
     }
   });
 });

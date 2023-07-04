@@ -2,6 +2,7 @@
 <html lang="fr">
 
 <head>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js">
     <meta charset="UTF-8">
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width">
@@ -37,7 +38,7 @@
             ?>
                 <?php include_once('menu.php'); ?>
                 <?php include_once('template-parts/modal-contact.php'); ?>
-                <?php include_once "template_parts/lightbox.php";?>
+                <?php include_once ('template-parts/lightbox.php');?>
             </nav>
     </header>
 
