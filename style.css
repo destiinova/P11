@@ -34,7 +34,7 @@ body {
     color: black;
 }
 
-.container {
+#container {
     margin: 0;
     padding: 0;
 }
@@ -117,7 +117,7 @@ html{
     .headerlogo{
         width: 138px; 
     }
-    #myBtn{
+    #myBtn3{
         display: flex;
         align-items: center;
         text-align: center;
@@ -125,7 +125,7 @@ html{
         color: #FFFFFF;
     }
     .contactburger{
-        padding-left : 0px;
+        margin-left : 0px;
 }
 }
 .buttonmenu {
@@ -708,7 +708,10 @@ button{
         width: 500px;
         height: 71px;
     }
-
+    .filtre_taxo {
+        display: flex;
+        flex-direction: column;
+    }
 
 }
 
@@ -1129,6 +1132,7 @@ button{
     display: flex;
     flex-direction: row-reverse;
     gap: 10PX;
+    color: #ffffff;
 }
 /* -----------------------------------------Hover Button-------------------------------------------------------- */
 

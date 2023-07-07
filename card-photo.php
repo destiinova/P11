@@ -37,7 +37,7 @@ $query = new WP_Query($args);
                     </div>
                     <div class="divoeil">
                     <a href="<?php the_permalink(); ?>"><img
-                                src="<?php echo get_stylesheet_directory_uri(); ?>/asset/oeil.png " alt="oeil"> </a>
+                                src="<?php echo get_stylesheet_directory_uri(); ?>/assets/oeil.png " alt="oeil"> </a>
                     </div>
                     <div class="divfullscreen">
                     <button class="buttonlightbox" data-titre="<?php the_title(); ?>" data-date="<?php $post_date = get_the_date('Y');
@@ -54,7 +54,7 @@ $query = new WP_Query($args);
                                    echo implode(', ', $category_names);
                                    // Concatène les noms des catégories avec une virgule comme séparateur
                                }
-                               ?>"><img src="wp-content\themes\motaphoto2\asset\fullscreen.png"></button>
+                               ?>"><img src="wp-content\themes\motaphoto\assets\fullscreen.png"></button>
                     </div>
                 </div>
             </div>

@@ -140,7 +140,7 @@ Template Name: Accueil
     ?>
 </div>
 <div class="chargerplus">
-    <a href="#!" class="btn btn_chargezplus" id="load-more"> Charger plus <img class="appareilphoto"
+    <a href="#!" class="btn btn_chargerplus" id="load-more"> Charger plus <img class="appareilphoto"
             src="wp-content\themes\motaphoto\assets\appareil_photo.png"></a>
 </div>
 

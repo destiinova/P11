@@ -1,20 +1,22 @@
 
 
 // FONCTION AJAX pour charger les photos
-jQuery('#load-more').on('click', function () {
-  currentPage++; //currentPage + 1, car nous voulons charger la page suivante
-  jQuery.ajax({
-  type: 'POST',
-  url: 'http://photographe-event.local/wp-admin/admin-ajax.php',
-  dataType: 'html',
-  data: {
-    action: 'weichie_load_more',
-    paged: currentPage,
-  },
-  success: function (res) {
-    jQuery('.photo_toutephoto').append(res);
-  }
-});
+let currentPage = 1;
+$('#load-more').on('click', function () {
+  currentPage++; // Do currentPage + 1, because we want to load the next page
+
+  $.ajax({
+    type: 'POST',
+    url: 'http://photographe-event.local/wp-admin/admin-ajax.php',
+    dataType: 'html',
+    data: {
+      action: 'weichie_load_more',
+      paged: currentPage,
+    },
+    success: function (res) {
+      $('.photo_toutephoto').append(res);
+    }
+  });
 });
 console.log('test')
 
